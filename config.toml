@@ -1,7 +1,7 @@
 # Site settings
-baseurl = "http://ma-al.github.io/hugo-test"
+baseurl = "https://ma-al.github.io/hugo-two/"
 languageCode = "en-us"
-title = "Hugrid - Quack Test"
+title = "Hugrid - Test Two"
 theme = "hugrid"
 
 contentdir = "content"
@@ -11,7 +11,7 @@ publishdir = "docs"
 
 [params]
     # Meta
-    title = "Test test quack quack. hugrid!"
+    title = "Hugrid the Second of his Name"
     subtitle = "A kind of boilerplate to perform anyone or anything quickly. Portfolio, collection, bookmarks, contacts and so on."
     author = "Pavel Kanyshev"
     description = "Hugrid - grid theme for Hugo with an expanding image preview."

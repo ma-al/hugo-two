@@ -4,7 +4,7 @@
 			<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Test test quack quack. hugrid!</title>
+		<title>Hugrid the Second of his Name</title>
 		<meta name="description" content="Hugrid - grid theme for Hugo with an expanding image preview." />
 		<meta name="keywords" content="Hugo, Hugo theme, grid theme, portfolio, bookmarks, collection, contacts" />
 		<meta name="author" content="Pavel Kanyshev" />
@@ -15,21 +15,21 @@
 		color: ;
 		}
 		</style>
-		<link rel="stylesheet" type="text/css" href="http://ma-al.github.io/hugo-testcss/default.css" />
-		<link rel="stylesheet" type="text/css" href="http://ma-al.github.io/hugo-testcss/component.css" />
-		<script src="http://ma-al.github.io/hugo-testjs/modernizr.custom.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://ma-al.github.io/hugo-two/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="https://ma-al.github.io/hugo-two/css/component.css" />
+		<script src="https://ma-al.github.io/hugo-two/js/modernizr.custom.js"></script>
 	
 	</head>
 	<body>
 		<div class="container">	
 							<header class="clearfix">
-				<h1>Test test quack quack. hugrid!<span>A kind of boilerplate to perform anyone or anything quickly. Portfolio, collection, bookmarks, contacts and so on.</span></h1>
+				<h1>Hugrid the Second of his Name<span>A kind of boilerplate to perform anyone or anything quickly. Portfolio, collection, bookmarks, contacts and so on.</span></h1>
 			</header>
 			<div class="main">
 				<ul id="og-grid" class="og-grid">
 					
 					<li>
-						<a href="" data-largesrc="images/full/1.png" data-title="Quack?" data-description="Quack quack quack">
+						<a href="http://localhost:1313/hugo-test" data-largesrc="images/full/1.png" data-title="Quack?" data-description="Aute ullamco aliqua incididunt anim proident in excepteur sunt aute anim ullamco aliqua. Ipsum occaecat deserunt dolore adipisicing deserunt nostrud anim quis eu quis Lorem non et velit labore tempor amet. Non laboris enim reprehenderit aliquip nisi anim laborum pariatur consectetur enim ex. Et culpa occaecat veniam ad fugiat tempor excepteur voluptate laborum excepteur mollit aliquip labore. Ea non velit nisi incididunt ut ullamco excepteur deserunt excepteur Lorem dolor. Aute ullamco aliqua incididunt anim proident in excepteur sunt aute anim ullamco aliqua. Ipsum occaecat deserunt dolore adipisicing deserunt nostrud anim quis eu quis Lorem non et velit labore tempor amet. Non laboris enim reprehenderit aliquip nisi anim laborum pariatur consectetur enim ex. Et culpa occaecat veniam ad fugiat tempor excepteur voluptate laborum excepteur mollit aliquip labore. Ea non velit nisi incididunt ut ullamco excepteur deserunt excepteur Lorem dolor.">
 							<img src="images/thumbs/1.png" alt="Duck Duck"/>
 						</a>
 					</li>
@@ -304,7 +304,7 @@
 				function saveItemInfo( saveheight ) {
 					$items.each( function() {
 						var $item = $( this );
-						$item.data( 'offsetTop', $item.offset().top );
+						$item.data( 'offsetTop', $item.offset().top + 200);
 						if( saveheight ) {
 							$item.data( 'height', $item.height() );
 						}
@@ -389,11 +389,12 @@
 					this.update();
 				}
 
-				Preview.prototype = {
+				
+        Preview.prototype = {
 					create : function() {
 						this.$title = $( '<h3></h3>' );
 						this.$description = $( '<p></p>' );
-						this.$href = $( '<a href="#">Get the theme</a>' );
+						this.$href = $( '<a href="#">Quack</a>' );
 						this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
 						this.$loading = $( '<div class="og-loading"></div>' );
 						this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
@@ -425,7 +426,7 @@
 								href : $itemEl.attr( 'href' ),
 								largesrc : $itemEl.data( 'largesrc' ),
 								title : $itemEl.data( 'title' ),
-								description : $itemEl.data( 'description' )
+								description : $itemEl.data( 'description' ),
 							};
 
 						this.$title.html( eldata.title );
@@ -514,8 +515,8 @@
 							};
 
 						this.calcHeight();
-						this.$previewEl.css( 'height', this.height );
-						this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
+						this.$previewEl.css( 'height', this.height + 150 );
+						this.$item.css( 'height', this.itemHeight + 150).on( transEndEventName, onEndFn );
 
 						if( !support ) {
 							onEndFn.call();
@@ -552,5 +553,6 @@
 				Grid.init();
 			});
 		</script>
+
 	</body>
 </html>

@@ -85,10 +85,17 @@
 	background: #333;
 }
 
-.og-fullimg,
-.og-details {
-	width: 50%;
+.og-fullimg {
+	width: 40%;
 	float: left;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.og-details {
+	width: 60%;
+	float: right;
 	height: 100%;
 	overflow: hidden;
 	position: relative;
@@ -106,6 +113,12 @@
 	display: inline-block;
 	max-height: 100%;
 	max-width: 100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
 }
 
 .og-details h3 {
