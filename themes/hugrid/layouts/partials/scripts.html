@@ -180,7 +180,7 @@
 				function saveItemInfo( saveheight ) {
 					$items.each( function() {
 						var $item = $( this );
-						$item.data( 'offsetTop', $item.offset().top );
+						$item.data( 'offsetTop', $item.offset().top + 200);
 						if( saveheight ) {
 							$item.data( 'height', $item.height() );
 						}
@@ -265,7 +265,8 @@
 					this.update();
 				}
 
-				Preview.prototype = {
+				
+        Preview.prototype = {
 					create : function() {
 						this.$title = $( '<h3></h3>' );
 						this.$description = $( '<p></p>' );
@@ -301,7 +302,7 @@
 								href : $itemEl.attr( 'href' ),
 								largesrc : $itemEl.data( 'largesrc' ),
 								title : $itemEl.data( 'title' ),
-								description : $itemEl.data( 'description' )
+								description : $itemEl.data( 'description' ),
 							};
 
 						this.$title.html( eldata.title );
@@ -390,8 +391,8 @@
 							};
 
 						this.calcHeight();
-						this.$previewEl.css( 'height', this.height );
-						this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
+						this.$previewEl.css( 'height', this.height + 150 );
+						this.$item.css( 'height', this.itemHeight + 150).on( transEndEventName, onEndFn );
 
 						if( !support ) {
 							onEndFn.call();
